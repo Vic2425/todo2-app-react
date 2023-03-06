@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -41,7 +40,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <form onSubmit={this.onClickHandler}>
             <input type='text' name='text' value={this.state.text} onChange={this.onChangeHandler} placeholder="add todo..."></input>
             <button type='submit' >Add Todo</button>
