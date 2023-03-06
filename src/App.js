@@ -43,11 +43,11 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <form onSubmit={this.onClickHandler}>
-            <input type='text' name='text' value={this.state.text} onChange={this.onChangeHandler}></input>
+            <input type='text' name='text' value={this.state.text} onChange={this.onChangeHandler} placeholder="add todo..."></input>
             <button type='submit' >Add Todo</button>
           </form>
           {!!this.state.todos.length && this.state.todos.map((todo, index) => (
-          <p key={index}>{todo} <button onClick={() => this.handlerDelete(index)}>Delete</button></p>))}
+          <p key={index}>{todo} <button onClick={() => this.handlerDelete(index)}>X</button></p>))}
         </header>
       </div>
     );
